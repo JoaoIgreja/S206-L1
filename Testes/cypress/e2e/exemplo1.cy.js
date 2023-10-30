@@ -57,7 +57,7 @@ function criarUsuario(){
     cy.get('#username').type(user)
     cy.get('#password').type(senha)
     cy.get('.btn-primary').click()
-    cy.get('.ng-binding').should('contain.text', 'Registration successful') // contain text significa que pode ter outra coisa escrita
+    cy.get('.ng-binding').should('contain.text', 'Registration successful')
 
     return userInfo
 
