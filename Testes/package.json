@@ -1,5 +1,13 @@
 {
+  "scripts": {
+    "cypress:run": "cypress run --env ci"
+  },
   "dependencies": {
     "cypress": "^13.3.2"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^7.1.2"
   }
 }

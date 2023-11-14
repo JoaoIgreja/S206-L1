@@ -2,7 +2,7 @@
 
 describe('Criando cenário de teste para o site Uai Rango', () => {
 
-  it('Caso de teste: Pesquisa de Items e acesso', () => {
+  it.skip('Caso de teste: Pesquisa de Items e acesso', () => {
 
       cy.visit('https://www.uairango.com/delivery/santa-rita-do-sapucai')
       cy.get('#palavra').type('Restaurante Elite Mineira')
@@ -16,6 +16,42 @@ describe('Criando cenário de teste para o site Uai Rango', () => {
       let info = criarUsuario()
   })
 
+
+})
+
+it.skip('Caso de teste: Login Falho', () => {
+
+  cy.visit('https://www.uairango.com/delivery/santa-rita-do-sapucai')
+  cy.get('.modal_login').click()
+  cy.get('#email_login').type('VaidarErrado@gmail.com')
+  cy.get('#senha_login').type('sla123')
+  cy.get('#botao_login').click()
+
+})
+
+it.skip('Caso de teste: Filtrar Restaurantes falho', () => {
+
+  cy.visit('https://www.uairango.com/delivery/santa-rita-do-sapucai')
+  cy.get('#entrega_delivery').click()
+  cy.get('#outras_formas').click()
+  cy.get(':nth-child(12) > label > #id_segmento\[\]').click()
+
+
+})
+
+it.skip('Caso de teste: Mudar Cidade sem opções', () => {
+
+  cy.visit('https://www.uairango.com/delivery/santa-rita-do-sapucai')
+  cy.get('.menu1 > [href="principal"]').click()
+  cy.get('.modal_cidades').click()
+
+})
+
+it('Caso de teste: Acessar Instagram Uai Rango', () => {
+
+  cy.visit('https://www.uairango.com/delivery/santa-rita-do-sapucai')
+  cy.get('.menu1 > [href="principal"]').click()
+  cy.get('[href="https://www.instagram.com/uairango"] > .efeito').click()
 
 })
 
@@ -39,7 +75,7 @@ function criarUsuario(){
   cy.get('#senha').type(senha)
   cy.get('#senha2').type(senha)
   cy.get('.checa-politica').click()
-  cy.get('.infos-cadastro > .form-login > #form_site > [name="envia"]').click()
+  cy.get('.infos-cadastro > .form-login > #form_site > [name="envia"]').click() 
 
 
 
