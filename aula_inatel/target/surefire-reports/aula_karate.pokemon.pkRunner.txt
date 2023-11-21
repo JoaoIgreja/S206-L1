@@ -1,4 +1,23 @@
 -------------------------------------------------------------------------------
 Test set: aula_karate.pokemon.pkRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.88 s - in aula_karate.pokemon.pkRunner
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.407 s <<< FAILURE! - in aula_karate.pokemon.pkRunner
+testPokemon[1][5]  Time elapsed: 0.521 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+>>>> js failed:
+01: karate.log('[print]',idioma)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "idioma" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:aula_karate/pokemon/pokemon.feature:43
+
+testPokemon[1][6]  Time elapsed: 1.561 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'This Pokémon transforms into a random opponent upon entering battle. This effect is identical to the move transform.'
+
+classpath:aula_karate/pokemon/pokemon.feature:55
+
