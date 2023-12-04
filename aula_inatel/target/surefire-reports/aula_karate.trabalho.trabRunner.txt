@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: aula_karate.trabalho.trabRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.812 s <<< FAILURE! - in aula_karate.trabalho.trabRunner
+testTrab  Time elapsed: 0.81 s  <<< ERROR!
+java.lang.RuntimeException: not found: aula_karate/trabalho/trabalho.feature
+
